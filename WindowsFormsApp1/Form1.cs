@@ -11,6 +11,7 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+            saveFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
         }
         private void male_CheckedChanged(object sender, EventArgs e)
         {
@@ -49,7 +50,6 @@ namespace WindowsFormsApp1
             string filename = saveFileDialog1.FileName;
             System.IO.File.WriteAllText(filename, result);
             MessageBox.Show("Файл сохранен");
-            saveFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
         }              
     }
 }
